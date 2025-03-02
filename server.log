@@ -1,6 +1,0 @@
-2025-03-02 10:16:13.882 - INFO - Server started on port 9999
-2025-03-02 10:16:17.761 - INFO - Connection 1 established with ('127.0.0.1', 51180)
-2025-03-02 10:16:21.595 - INFO - Connection 1 closed with ('127.0.0.1', 51180)
-2025-03-02 10:16:22.595 - INFO - Connection 2 established with ('127.0.0.1', 51182)
-2025-03-02 10:16:24.879 - INFO - Connection 2 closed with ('127.0.0.1', 51182)
-2025-03-02 10:16:30.597 - INFO - Server shutting down gracefully...
