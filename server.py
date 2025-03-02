@@ -29,13 +29,13 @@ PORT = 9999
 def handle_client(client_socket, client_address, conn_id):
     """Handle client connections and echo back received data"""
     try:
-        logging.info(f"Connection {conn_id} established with {client_address}")
+        logging.info(f"Server ConnID {conn_id} established with {client_address}")
         while True:
             data = client_socket.recv(1024)
             if not data:
                 break
             message = data.decode('utf-8')
-            response = f"[Conn {conn_id}] {message}"
+            response = f"[Server ConnID {conn_id}] {message}"
             client_socket.sendall(response.encode('utf-8'))
     except ConnectionResetError:
         logging.warning(f"Connection reset by {client_address}")
@@ -43,7 +43,7 @@ def handle_client(client_socket, client_address, conn_id):
         logging.error(f"Error with {client_address}: {str(e)}")
     finally:
         client_socket.close()
-        logging.info(f"Connection {conn_id} closed with {client_address}")
+        logging.info(f"Server ConnID {conn_id} closed with {client_address}")
 
 def start_server():
     """Start the TCP echo server"""
